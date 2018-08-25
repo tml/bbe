@@ -68,6 +68,7 @@ byte_to_string(unsigned char byte,char format)
             sprintf(string,"x%02x",(int) byte);
             break;
         case 'D':
+        case 'K':
             sprintf(string,"%3d",(int) byte);
             break;
         case 'O':
@@ -104,6 +105,7 @@ off_t_to_string(off_t number,char format)
              sprintf(string,"x%llx",(long long) number);
              break;
         case 'D':
+        case 'K':
              sprintf(string,"%lld",(long long) number);
              break;
         case 'O':
@@ -162,6 +164,9 @@ execute_commands(struct command_list *c)
                 break;
             case 'D':
                 if(c->offset == in_buffer.block_num || c->offset == 0) delete_this_block = 1;
+                break;
+            case 'K':
+                if(c->offset == in_buffer.block_num || c->offset == 0) delete_this_block = 0;
                 break;
             case 'i':
                 if(c->offset == in_buffer.block_offset && !c->rpos) 
@@ -702,6 +707,9 @@ execute_program(struct commands *commands)
     {
         reset_rpos(commands->byte);
         delete_this_block = 0;
+        if (commands->block_start->letter == 'K') {
+           delete_this_block = 1;
+        }
         out_buffer.block_offset = 0;
         skip_this_block = 0;
         if(w_commands_block_num) open_w_files(in_buffer.block_num);

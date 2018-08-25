@@ -72,7 +72,7 @@ char *convert_strings[] = {
           "",
 };
 /* commands to be executed at start of buffer */
-#define BLOCK_START_COMMANDS "DIJLFBN>"
+#define BLOCK_START_COMMANDS "KDIJLFBN>"
 
 /* commands to be executed for each byte  */
 #define BYTE_COMMANDS "acdirsywjpl&|^~ufx"
@@ -450,6 +450,7 @@ parse_command(char *command_string)
     switch(new->letter)
     {
         case 'D':
+        case 'K':
             if(i < 1 || i > 2 || strlen(token[0]) > 1) panic("Error in command",command_string,NULL);
             if(i == 2) 
             {
