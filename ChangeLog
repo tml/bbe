@@ -1,0 +1,77 @@
+2006-11-xx  Timo Savinen <tjsa@iki.fi>
+
+    * Version 0.2.2
+
+2006-10-29  Timo Savinen <tjsa@iki.fi>
+
+    * Version 0.2.1
+    * More problems with zero size input corrected
+
+2006-10-23  Timo Savinen <tjsa@iki.fi>
+
+    * Version 0.2.0
+    * Infinite loop in case of zero size input corrected
+
+2006-03-13  Timo Savinen <tjsa@iki.fi>
+
+    * Version 0.1.9
+    * d-command: count can be replaced with *, meaning all bytes in a block.
+    * man page displays correctly in HP-UX
+
+2005-11-15  Timo Savinen <tjsa@iki.fi>
+
+    * Version 0.1.8
+    * block commands < and > added
+    * block initialize commands u and f added
+
+2005-11-08  Timo Savinen <tjsa@iki.fi>
+
+    * Version 0.1.7
+    * More sane results when byte ranges of d and i commands overlap
+
+2005-10-28  Timo Savinen <tjsa@iki.fi>
+
+    * Version 0.1.6
+    * bug in s-command fixed, endless loop in some cases
+    * bbe.html is now installed to /usr/local/share/doc/bbe
+
+2005-10-23  Timo Savinen <tjsa@iki.fi>
+
+    * Version 0.1.5
+    * %B and %nB for block number in filename of w-command
+    * Documentation corrected
+
+2005-10-16  Timo Savinen <tjsa@iki.fi>
+    
+    * Version 0.1.4
+    * Better performace
+    * bug in buffer definition /string/: and :/string/ fixed
+
+2005-10-09  Timo Savinen <tjsa@iki.fi>
+
+    * Version 0.1.3
+    * bug in c BCD ASC
+    * p b added
+    * Typo in usage fixed
+
+2005-10-02  Timo Savinen <tjsa@iki.fi>
+
+    * Version 0.1.2
+    * escape codes for \n \t \r \a \b \v \f
+    * "p d" fixed
+    * Meaning of A and I flipped (to what sed has)
+    * check for gnu functions, compiles ok in hp-ux with gcc.
+    * Bitwise operators &,|,^ and ~
+
+2005-09-25  Timo Savinen <tjsa@iki.fi>
+
+    * Version 0.1.1
+    * Bug fixes (\\ escape in strings)
+    * -s option added
+    * Added F, B, N and p commands
+    * Several commands can be given in one -e switch, commands must be separated by semicolon
+
+2005-09-15  Timo Savinen <tjsa@iki.fi>
+
+    * bbe: initial version 0.1.0.
+
